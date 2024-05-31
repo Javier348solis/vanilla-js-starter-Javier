@@ -4,10 +4,33 @@
 <head>
 	<title>Ejemplo básico</title>
 	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/src/index.css">
 </head>
 
 <body>
-	<h1>La aplicación esta corriendo!</h1>
+   <h1 class="title">Tasks to do</h1>
+
+   <br>
+  <!-- I add an input and one bottom to add and save the files -->
+   <div class="Space files">
+	<input type="text" placeholder="Add tasks">
+   <button>Add file</button>
+ </div>
+
+ <br>
+ <!-- I add this input for have the exactly number of files that I upload in the page, also you if you want you can add thhe type of input(It's optional) -->
+   <div class="counter">
+     <p>Complete tasks</p>
+	 <input class="main-counter" type="number">
+   </div>
+
+   <br>
+
+   <div class="white-space">
+
+   </div>
+
+
 
 	<script src="./index.js" type="module"></script>
 </body>
