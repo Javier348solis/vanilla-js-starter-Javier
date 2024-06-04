@@ -7,39 +7,65 @@ body{
      justify-content: center;
      background-color: rgb(169, 169, 169, 0.4);
 }
-.title {
+#title {
      display: flex;
      justify-content: center;
 }
-.white-space{
-     height: 450px;
+#white-space{
+     height: 450px; 
      border: 2px solid black;
 }
-.Space-files{
+#Space-files{
     display: grid;
     grid-template-columns: auto;
 }
-.line{
-     width: 120px;
+#line{
+     width: 200px;
      height: 30px;
+     background-color: transparent;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     text-align: center;
+     border: 3px solid black;
 }
 #boton{
      background-color: rgb(0, 0, 255, 0.4);
+     width: 120px;
+     text-align: center;
+     margin-left: 40px;
 }
-.main-counter{
+#main-counter{
      width: 60px;
      height: 60px;
      border-radius: 50%;
      display: flex;
      text-align: center;
      justify-content: left;
+     background-color: transparent;
 }
-.text{
-     
-     display: flex;
-     
+#text{
+width: 40px;     
+margin-right: 45px;
+text-align: center;
+font-size: large;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.Space-b{
+#Space-b{
      display: flex;
      justify-content: space-between;
+}
+#Complete-tasks{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.Parra{
+     border: 1px solid black;
+     padding: 10px;
+     margin: 15px;
+}
+.boton{
+
+}
+.text{
+
 }
