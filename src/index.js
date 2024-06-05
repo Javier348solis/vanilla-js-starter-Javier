@@ -6,6 +6,12 @@ let datos = document.getElementById("white-space")
 
 
 
+inputTask.addEventListener("keydown",(e)=>{
+    if (e.key=="Enter") {
+        darDatos()
+    }
+})
+
 //GET
 async function getDatos() {
     datos.innerHTML=""
@@ -23,12 +29,22 @@ async function getDatos() {
         btn.innerHTML="Delete"
         btn.addEventListener("click",()=>{
             // LLAMAR A LA FUNCION DELETE
+            
             deleteTask(create1.id)
+            
         })
         paragraph.innerHTML=create1.nombre
         paragraph.appendChild(btn)
         paragraph.appendChild(inp)
         datos.appendChild(paragraph)
+        inp.addEventListener("click", ()=>{
+            if (inp.checked==true) {
+                uploadCheck(create1.id)
+                contenedor.value++                
+            }else{
+                contenedor.value--
+            }
+        })
     });
     
 } catch (error) {
@@ -81,14 +97,30 @@ async function deleteTask(id) {
 }
 
 //PUT
-async function updateTask(id) {
+async function uploadCheck(id) {
     try {
-        let task={
-
+        let task = {
+            estado:true
         }
+    const answer = await fetch(`http://localhost:3000/api/task/${id}`,{
+        method:"PUT",
+        headers:{
+            "Content-type": "application/json"
+        },
+        body:JSON.stringify(task)
+    })
+    let data = await answer.json()
+    console.log(data)
     } catch (error) {
-        
+        console.log(error);
     }
 }
+
+// Llamar a la función updateCounter al cargar los datos por primera vez
+getDatos();
+
+// Agregar un event listener para cada vez que se cambie el estado del checkbox
+
+
 getDatos() 
 
