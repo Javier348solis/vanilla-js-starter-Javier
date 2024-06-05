@@ -12,7 +12,7 @@ body{
      justify-content: center;
 }
 #white-space{
-     height: 450px; 
+    min-height: 450px; 
      border: 2px solid black;
 }
 #Space-files{
