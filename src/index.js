@@ -1,7 +1,7 @@
 // Inserte el código aquí
 let inputTask = document.getElementById("line")
 import { darDatos } from "./postAndDelete"
-
+import { getDatos } from "./getData"
 
 inputTask.addEventListener("keydown",(e)=>{
     if (e.key=="Enter" && inputTask.value != "") {
@@ -30,7 +30,7 @@ async function uploadCheck(id) {
         console.log(error);
     }
 }
-
+getDatos()
 // Llamar a la función updateCounter al cargar los datos por primera vez
 
 // Agregar un event listener para cada vez que se cambie el estado del checkbox

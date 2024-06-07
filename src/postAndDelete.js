@@ -1,6 +1,20 @@
 import { getDatos } from "./getData"
+import Swal from 'sweetalert2'
+import "../src/index.css"
 let btnAgg = document.getElementById("boton")
 let inputTask = document.getElementById("line")
+
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'center',
+    iconColor: 'white',
+    customClass: {
+      popup: 'colored-toast',
+    },
+    showConfirmButton: false,
+    timer: 1500,
+    timerProgressBar: true,
+  })
 
 //POST
 async function darDatos(){
@@ -21,7 +35,7 @@ async function darDatos(){
         getDatos()
          console.log(data);
     } catch (error) {
-        console.error(error);
+        console.log(error);
     }
 }
 
@@ -41,10 +55,12 @@ async function deleteTask(id) {
     });
     if (deleteApp.ok) {
         await getDatos();
-        alert("Succesfully task delete")
+    await Toast.fire({
+        icon: 'error',
+        title: 'Succesfully task delete',
+      })
     }
     else{
-        alert("Nothing")
     }
     } catch (error) {
         console.error(error);

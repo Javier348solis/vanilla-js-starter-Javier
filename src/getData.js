@@ -1,14 +1,26 @@
 //GET
-import { uploadCheck } from ".";
-import { deleteTask    } from "./postAndDelete";
+import {uploadCheck} from ".";
+import {deleteTask} from "./postAndDelete";
 let datos = document.getElementById("white-space")
 let contenedor = document.getElementById("main-counter")
+let parrafo = document.getElementById("nothing")
 
 async function getDatos() {
     datos.innerHTML=""
     try {
         const respuesta = await fetch("http://localhost:3000/api/task")
         let datosFetch = await respuesta.json()
+        let validarTexto = Array.from(datosFetch)
+        
+        if (validarTexto.length==0) {
+            console.log("NO hay tareas");
+            parrafo.style.display="block"
+            parrafo.setAttribute("class","seVe")
+        }else{
+            console.log("SI hay tareas");
+            parrafo.style.display="none"
+
+        }
         console.log(datosFetch);
         datosFetch.forEach(create1 => {
             let inp = document.createElement("input")
@@ -34,6 +46,7 @@ async function getDatos() {
                 contenedor.value--
             }
         })
+    
     });
     
 } catch (error) {
