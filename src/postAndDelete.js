@@ -50,7 +50,7 @@ btnAgg.addEventListener("click", function () {
 //URL DELETE http://localhost:3000/api/task/id
 async function deleteTask(id) {
     try {
-        const deleteApp = await fetch( `http://localhost:3000/api/task/${id}`,{
+        const deleteApp = await fetch( `http://localhost:3000/api/task/${id}`,{ 
         method: "Delete"
     });
     if (deleteApp.ok) {
