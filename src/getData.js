@@ -14,7 +14,7 @@ async function getDatos() {
         
         if (validarTexto.length==0) {
             console.log("NO hay tareas");
-            parrafo.style.display="block"
+            parrafo.style.display="block" 
             parrafo.setAttribute("class","seVe")
         }else{
             console.log("SI hay tareas");

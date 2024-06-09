@@ -74,11 +74,9 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .seVe{
      font-size: large;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
-     
      display: flex;
      justify-content: center;
      margin-top: 200px;
-     
 }
 .noSeVe{
      display: none;
