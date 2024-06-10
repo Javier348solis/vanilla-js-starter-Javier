@@ -56,4 +56,4 @@ async function getDatos() {
     console.error(error);
 }
 }
-export {getDatos}
+export {getDatos}   
