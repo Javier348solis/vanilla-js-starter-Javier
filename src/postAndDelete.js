@@ -17,7 +17,7 @@ const Toast = Swal.mixin({
   })
 
 //POST
-async function darDatos(){
+async function darDatos(){ 
     try {
         let tarea ={
             id:Date.now(),
@@ -40,7 +40,7 @@ async function darDatos(){
 }
 
 btnAgg.addEventListener("click", function () {
-    if (inputTask.value!="") {
+    if (inputTask.value!="" && inputTask.value.trim()) {
         darDatos()
     }
 })

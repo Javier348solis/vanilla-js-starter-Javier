@@ -5,7 +5,7 @@ import { getDatos } from "./getData"
 
 //se da la funcion a la tecla 'enter' para que agregue las tareas
 inputTask.addEventListener("keydown",(e)=>{
-    if (e.key=="Enter" && inputTask.value != "") {
+    if (e.key=="Enter" && inputTask.value !== ""  && inputTask.value.trim()) {
         darDatos()
     }
 })
