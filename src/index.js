@@ -3,6 +3,7 @@ let inputTask = document.getElementById("line")
 import { darDatos } from "./postAndDelete"
 import { getDatos } from "./getData"
 
+//se da la funcion a la tecla 'enter' para que agregue las tareas
 inputTask.addEventListener("keydown",(e)=>{
     if (e.key=="Enter" && inputTask.value != "") {
         darDatos()
@@ -10,7 +11,7 @@ inputTask.addEventListener("keydown",(e)=>{
 })
 
 
-
+//Se da la funcion para que el checkbox cambie de valor a verdadero o falso
 //PUT
 async function uploadCheck(id) {
     try {
