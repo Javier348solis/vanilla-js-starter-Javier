@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve src/index.html --open",
+    "start": "parcel serve src/inicio.html --open",
+    
     "test": "jest"
   },
   "keywords": [],
