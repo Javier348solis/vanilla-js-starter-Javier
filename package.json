@@ -2,9 +2,9 @@
   "name": "vanilla-js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "page.js",
   "scripts": {
-    "start": "parcel serve src/inicio.html --open",
+    "start": "parcel serve src/page.html --open",
     "test": "jest"
   },
   "keywords": [],

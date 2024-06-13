@@ -9,18 +9,24 @@ boton1.addEventListener("click",comparation )
 
     let bandera = true
     let datos = await inicioSesion()
-   console.log(54543)
+ 
     datos.forEach(users => {
-        if (users.correo == nameLogin && users.contrasena == passwordLogin) {
+        if (users.correo === nameLogin && users.contrasena === passwordLogin) {
             bandera = false
-          
+           
+            localStorage.setItem("cuenta",users)
+        ///   window.location.href="page.html"
+          alert("Succesfully LOGIN")
           
             
         }
         if (bandera) {
-      
+        alert("Error, METASE EN LA VARA")
             bandera = false
             
         }
     });
 }
+
+
+//Validacion PUT
